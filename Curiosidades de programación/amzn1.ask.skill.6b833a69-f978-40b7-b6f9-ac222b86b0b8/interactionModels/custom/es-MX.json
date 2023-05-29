@@ -1,0 +1,85 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "curiosidades de programación",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "que hace la skill",
+            "como uso la skill",
+            "como usar",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "sayonara",
+            "cierra skill",
+            "cerrar",
+            "adios",
+            "hasta luego"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CustomLanguageIntent",
+          "slots": [
+            {
+              "name": "language",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "dime algo sobre {language}",
+            "curiosidad {language}",
+            "que sabes de {language}",
+            "dime una curiosidad sobre {language}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CustomLanguageIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "language",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.790667382998.1624654660400"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.790667382998.1624654660400",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Menciona el lenguaje "
+          }
+        ]
+      }
+    ]
+  },
+  "version": "5"
+}

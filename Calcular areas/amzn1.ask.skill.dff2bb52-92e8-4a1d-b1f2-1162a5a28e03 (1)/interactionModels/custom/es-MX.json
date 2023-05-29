@@ -1,0 +1,110 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "calcular areas",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "cancelar"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "hasta la proxima",
+            "adios"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CalcularAreaRectanguloIntent",
+          "slots": [
+            {
+              "name": "largo",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "ancho",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "calcular el área de un rectangulo con largo {largo} y ancho {ancho}"
+          ]
+        },
+        {
+          "name": "CalcularTrianguloIntent",
+          "slots": [
+            {
+              "name": "base",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "altura",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "calcular el area de un triangulo de base {base} y altura de {altura}"
+          ]
+        },
+        {
+          "name": "CalcularAreaCirculoIntent",
+          "slots": [
+            {
+              "name": "radio",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "calcular el área de un circulo con radio {radio} "
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "rectangulo"
+              }
+            },
+            {
+              "name": {
+                "value": "cuadrado"
+              }
+            },
+            {
+              "name": {
+                "value": "circulo"
+              }
+            }
+          ],
+          "name": "figuras"
+        }
+      ]
+    }
+  },
+  "version": "14"
+}

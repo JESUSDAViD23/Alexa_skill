@@ -1,0 +1,108 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "converter distances",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "bye"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "ConvertUnid",
+          "slots": [
+            {
+              "name": "valor",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unidad_origen",
+              "type": "measurement_units"
+            },
+            {
+              "name": "unidad_destino",
+              "type": "measurement_units"
+            }
+          ],
+          "samples": [
+            "how much {valor} {unidad_origen} is equivalent to {unidad_destino}",
+            "convert {valor} {unidad_origen} to {unidad_destino}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "foot",
+                "synonyms": [
+                  "feet"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "yard",
+                "synonyms": [
+                  "yards"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "meter",
+                "synonyms": [
+                  "meters"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "inch",
+                "synonyms": [
+                  "inches"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "centimeter",
+                "synonyms": [
+                  "centimeters"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "mille",
+                "synonyms": [
+                  "milles"
+                ]
+              }
+            }
+          ],
+          "name": "measurement_units"
+        }
+      ]
+    }
+  },
+  "version": "10"
+}
